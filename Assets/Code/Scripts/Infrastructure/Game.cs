@@ -1,6 +1,8 @@
 using Infrastructure.States;
 using Logic;
 using Services;
+using Services.Input;
+using UnityEngine;
 
 namespace Infrastructure
 {
@@ -10,6 +12,11 @@ namespace Infrastructure
 
     public Game(ICoroutineRunner coroutineRunner, LoadingCurtain curtain)
     {
+      if (Application.isEditor)
+      {
+        
+      }
+        
       StateMachine = new GameStateMachine(new SceneLoader(coroutineRunner), curtain, AllServices.Container);
     }
   }
