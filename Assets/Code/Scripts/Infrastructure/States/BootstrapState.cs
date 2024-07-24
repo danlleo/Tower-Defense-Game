@@ -1,4 +1,6 @@
-﻿using Services;
+﻿using Infrastructure.AssetManagment;
+using Infrastructure.Factory;
+using Services;
 using Services.Input;
 
 namespace Infrastructure.States
@@ -36,6 +38,8 @@ namespace Infrastructure.States
     {
       _services.RegisterSingle<IGameStateMachine>(_stateMachine);
       _services.RegisterSingle<IInputService>(_inputService);
+      _services.RegisterSingle<IAssets>(new AssetsProvider());
+      _services.RegisterSingle<IGameFactory>(new GameFactory(AllServices.Container.Single<IAssets>()));
     }
 
     private void EnterLoadLevel() =>
