@@ -1,4 +1,5 @@
 ﻿using Infrastructure.AssetManagment;
+using Services.Mobs;
 using UnityEngine;
 
 namespace Infrastructure.Factory
@@ -14,5 +15,10 @@ namespace Infrastructure.Factory
 
         public GameObject CreateHUD() =>
             _assets.Instantiate(AssetPath.HUDPath);
+        
+        //public GameObject SpawnEnemies(EnemyTypeID enemyTypeID, Transform transform)
+        //{
+            
+        //}
     }
 }

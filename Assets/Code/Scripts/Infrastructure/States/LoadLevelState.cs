@@ -30,7 +30,7 @@ namespace Infrastructure.States
 		private void OnLoaded()
 		{
 			_gameFactory.CreateHUD();
-			
+
 			_stateMachine.Enter<GameLoopState>();
 		}
 	}
