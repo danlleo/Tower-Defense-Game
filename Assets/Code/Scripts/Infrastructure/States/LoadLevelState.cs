@@ -1,5 +1,7 @@
 ﻿using Infrastructure.Factory;
 using Logic;
+using Services.Mobs;
+using UnityEngine;
 
 namespace Infrastructure.States
 {
@@ -18,6 +20,20 @@ namespace Infrastructure.States
 			_gameFactory = gameFactory;
 		}
 
+		private void InitGameWorld()
+		{
+			InitSpawners();
+		}
+		
+		private void InitSpawners()
+		{
+			foreach (GameObject spawnerObjects in GameObject.FindGameObjectsWithTag(Tags.EnemySpawner))
+			{
+				EnemySpawner spawner = spawnerObjects.GetComponent<EnemySpawner>();
+				spawner.Spawn();
+			}
+		}
+
 		public void Enter(string sceneName)
 		{
 			_loadingCurtain.Show();
@@ -29,9 +45,11 @@ namespace Infrastructure.States
 
 		private void OnLoaded()
 		{
+			InitGameWorld();
 			_gameFactory.CreateHUD();
 
 			_stateMachine.Enter<GameLoopState>();
 		}
 	}
+
 }

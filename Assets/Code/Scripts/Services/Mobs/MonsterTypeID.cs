@@ -2,12 +2,17 @@
 {
     public enum EnemyTypeID
     {
-        Lich = 0,
-        ShadowDemon = 1,
-        Drowranger = 2,
-        Windranger = 3,
-        MonkeyKing = 4,
-        Earthshaker = 5,
-        Tinker = 6,
+        Infantryman = 0,
+        Captain = 1,
+        EnchanterOfTheSecretSun = 2,
+        Mercenary = 3,
+        Knight = 4,
+        SolarElemental = 5,
+        SlaveOfTheSun = 6,
+        Cultist = 7,
+        Taran = 8,
+        IronGolem = 9,
+        SunCultMonk = 10,
+        
     }
 }

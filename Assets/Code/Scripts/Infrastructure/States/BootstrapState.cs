@@ -2,7 +2,6 @@
 using Infrastructure.Factory;
 using Services;
 using Services.Input;
-using Services.Mobs;
 
 namespace Infrastructure.States
 {
@@ -37,10 +36,18 @@ namespace Infrastructure.States
     /// </summary>
     private void RegisterServices()
     {
+      RegisterStaticData();
+      
       _services.RegisterSingle<IGameStateMachine>(_stateMachine);
       _services.RegisterSingle<IInputService>(_inputService);
-      _services.RegisterSingle<IAssets>(new AssetsProvider());
-      _services.RegisterSingle<IGameFactory>(new GameFactory(AllServices.Container.Single<IAssets>()));
+      _services.RegisterSingle<IAssetsProvider>(new AssetsProvider());
+      _services.RegisterSingle<IGameFactory>(new GameFactory(_services.Single<IAssetsProvider>(), _services.Single<IStaticDataService>())); 
+    }
+    private void RegisterStaticData()
+    {
+      IStaticDataService staticData = new StaticDataService();
+      staticData.LoadEnemies();
+      _services.RegisterSingle(staticData);
     }
 
     private void EnterLoadLevel() =>

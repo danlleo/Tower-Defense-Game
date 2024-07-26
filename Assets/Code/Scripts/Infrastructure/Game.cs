@@ -1,7 +1,6 @@
 using Infrastructure.States;
 using Logic;
 using Services;
-using Services.Input;
 using UnityEngine;
 
 namespace Infrastructure

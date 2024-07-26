@@ -13,12 +13,18 @@ MonoBehaviour:
   m_Name: WaveData
   m_EditorClassIdentifier: 
   WaveConfig:
-  - <Delay>k__BackingField: 7
-    <EnemiesType>k__BackingField: 1
-    <EnemiesCount>k__BackingField: 0
-  - <Delay>k__BackingField: 0
+  - <Delay>k__BackingField: 19
+    <EnemiesType>k__BackingField: 5
+    <EnemiesCount>k__BackingField: 3
+  - <Delay>k__BackingField: 10
     <EnemiesType>k__BackingField: 0
-    <EnemiesCount>k__BackingField: 0
-  - <Delay>k__BackingField: 0
+    <EnemiesCount>k__BackingField: 10
+  - <Delay>k__BackingField: 13
     <EnemiesType>k__BackingField: 0
-    <EnemiesCount>k__BackingField: 0
+    <EnemiesCount>k__BackingField: 10
+  - <Delay>k__BackingField: 11
+    <EnemiesType>k__BackingField: 0
+    <EnemiesCount>k__BackingField: 9
+  - <Delay>k__BackingField: 8
+    <EnemiesType>k__BackingField: 0
+    <EnemiesCount>k__BackingField: 10

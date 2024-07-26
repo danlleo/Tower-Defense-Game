@@ -1,5 +1,4 @@
-﻿using System;
-using Infrastructure.Factory;
+﻿using Infrastructure.Factory;
 using UnityEngine;
 
 namespace Services.Mobs
@@ -7,15 +6,16 @@ namespace Services.Mobs
     public class EnemySpawner : MonoBehaviour
     {
         public EnemyTypeID EnemyTypeID;
-        private IGameFactory _factory;
+        private IGameFactory _gameFactory;
+
         private void Awake()
         {
-            _factory = AllServices.Container.Single<IGameFactory>();
+            _gameFactory = AllServices.Container.Single<IGameFactory>();
         }
 
-        private void Spawn()
+        public void Spawn()
         {
-           // GameObject enemy = _factory.SpawnEnemies(EnemyTypeID, transform);
+            _gameFactory.CreateEnemy(EnemyTypeID, transform);
         }
     }
 }
