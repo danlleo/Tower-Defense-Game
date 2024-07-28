@@ -1,6 +1,7 @@
 ﻿using Infrastructure.AssetManagment;
 using Infrastructure.Factory;
 using Services;
+using Services.Grid;
 using Services.Input;
 
 namespace Infrastructure.States
@@ -12,6 +13,7 @@ namespace Infrastructure.States
     private readonly InputService _inputService;
     private readonly SceneLoader _sceneLoader;
     private readonly AllServices _services;
+    private readonly GridSystemSettings _gridSystemSettings;
     
       
     public BootstrapState(GameStateMachine stateMachine, SceneLoader sceneLoader, AllServices services)
@@ -20,6 +22,7 @@ namespace Infrastructure.States
       _sceneLoader = sceneLoader;
       _services = services;
       _inputService = new StandaloneInputService();
+      _gridSystemSettings = new GridSystemSettings(30, 20, 1f);
       
       RegisterServices();
     }
@@ -42,7 +45,9 @@ namespace Infrastructure.States
       _services.RegisterSingle<IInputService>(_inputService);
       _services.RegisterSingle<IAssetsProvider>(new AssetsProvider());
       _services.RegisterSingle<IGameFactory>(new GameFactory(_services.Single<IAssetsProvider>(), _services.Single<IStaticDataService>())); 
+      _services.RegisterSingle<IGridSystem>(new Services.Grid.GridSystem(_gridSystemSettings));
     }
+    
     private void RegisterStaticData()
     {
       IStaticDataService staticData = new StaticDataService();
