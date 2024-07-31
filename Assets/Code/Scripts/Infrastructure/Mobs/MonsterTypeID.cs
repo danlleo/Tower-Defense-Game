@@ -1,4 +1,4 @@
-﻿namespace Services.Mobs
+﻿namespace Infrastructure.Mobs
 {
     public enum EnemyTypeID
     {
@@ -13,6 +13,5 @@
         Taran = 8,
         IronGolem = 9,
         SunCultMonk = 10,
-        
     }
 }

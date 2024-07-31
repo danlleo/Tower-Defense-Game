@@ -1,6 +1,6 @@
 ﻿using Infrastructure.Factory;
+using Infrastructure.Mobs;
 using Logic;
-using Services.Mobs;
 using UnityEngine;
 
 namespace Infrastructure.States

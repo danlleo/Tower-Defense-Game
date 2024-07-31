@@ -1,4 +1,4 @@
-﻿using Services.Mobs;
+﻿using Infrastructure.Mobs;
 using UnityEngine;
 
 namespace Infrastructure.StaticData
@@ -10,8 +10,7 @@ namespace Infrastructure.StaticData
     
         [Range(1,100)] public int Hp = 50;
         [Range(1,30)] public float Damage = 10;
-        [Range(.5f,1)] public float EffectiveDistance = .5f;
-        [Range(.5f,1)] public float Cleavage = .5f;
+        [Range(.5f,1)] public float AttackRange = .5f;
         [Range(0,10)] public float MoveSpeed = 3;
     
         public GameObject Prefab;

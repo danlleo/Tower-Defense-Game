@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Infrastructure.Mobs;
 using Infrastructure.StaticData;
-using Services.Mobs;
 using UnityEngine;
 
 namespace Services

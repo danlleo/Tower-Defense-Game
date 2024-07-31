@@ -338,7 +338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c749637ae3d942ad910a8fe82ba3b33a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyTypeID: 4
+  LevelConfig: {fileID: 11400000, guid: da7a3d8f9a156e74cb23b38f985b5411, type: 2}
 --- !u!4 &1828847337
 Transform:
   m_ObjectHideFlags: 0
@@ -348,52 +348,7 @@ Transform:
   m_GameObject: {fileID: 1828847335}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 213.4, y: 315.6779, z: -22.052748}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1829346367
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1829346369}
-  - component: {fileID: 1829346368}
-  m_Layer: 0
-  m_Name: Spawner (1)
-  m_TagString: EnemySpawner
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1829346368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1829346367}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c749637ae3d942ad910a8fe82ba3b33a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemyTypeID: 1
---- !u!4 &1829346369
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1829346367}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 216.71, y: 315.6779, z: -19.62}
+  m_LocalPosition: {x: 213.4, y: 315.693, z: -22.072}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -544,4 +499,3 @@ SceneRoots:
   - {fileID: 1597228385}
   - {fileID: 73311020}
   - {fileID: 1828847337}
-  - {fileID: 1829346369}

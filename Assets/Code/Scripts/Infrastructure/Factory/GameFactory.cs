@@ -1,7 +1,7 @@
 ﻿using Infrastructure.AssetManagment;
+using Infrastructure.Mobs;
 using Infrastructure.StaticData;
 using Services;
-using Services.Mobs;
 using UnityEngine;
 
 namespace Infrastructure.Factory

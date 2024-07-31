@@ -1,5 +1,5 @@
-﻿using Services;
-using Services.Mobs;
+﻿using Infrastructure.Mobs;
+using Services;
 using UnityEngine;
 
 namespace Infrastructure.Factory
