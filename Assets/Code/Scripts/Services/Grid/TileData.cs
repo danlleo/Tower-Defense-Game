@@ -14,7 +14,7 @@
         public void SetGridObject(IGridObject gridObject) => 
             GridObject = gridObject;
         
-        public void RemoveOccupier() => 
+        public void RemoveGridObject() => 
             GridObject = null;
     }
 }
