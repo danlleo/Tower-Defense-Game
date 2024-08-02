@@ -158,6 +158,9 @@
         },
         {
             "m_Id": "a6d2818f5f06450d80a4a1b732c8cc7d"
+        },
+        {
+            "m_Id": "ced2cf3596cf498d9f5569cf54ffef4d"
         }
     ],
     "m_GroupDatas": [
@@ -658,6 +661,20 @@
                     "m_Id": "9291f96f6d9d4bb69e34f0b0895b9d84"
                 },
                 "m_SlotId": 2
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "cfa54030c2744bc589c69edf6ff845e4"
+                },
+                "m_SlotId": 0
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "ced2cf3596cf498d9f5569cf54ffef4d"
+                },
+                "m_SlotId": 0
             }
         },
         {
@@ -1537,10 +1554,10 @@
     "m_Guid": {
         "m_GuidSerialized": "cf9f4468-a7f7-4dfd-904a-98cd447413ae"
     },
-    "m_Name": "CurrentTilePosition",
+    "m_Name": "SelectedGameObjectFirstTilePosition",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "CurrentTilePosition",
-    "m_DefaultReferenceName": "_CurrentTilePosition",
+    "m_RefNameGeneratedByDisplayName": "SelectedGameObjectFirstTilePosition",
+    "m_DefaultReferenceName": "_SelectedGameObjectFirstTilePosition",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -1551,8 +1568,8 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "x": 3.0,
-        "y": 3.0,
+        "x": 1.0,
+        "y": 1.0,
         "z": 0.0,
         "w": 0.0
     }
@@ -2432,6 +2449,30 @@
 {
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.DynamicVectorMaterialSlot",
+    "m_ObjectId": "74d73f2fa3614c44a8f18e7fd226d562",
+    "m_Id": 1,
+    "m_DisplayName": "Out",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Out",
+    "m_StageCapability": 3,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.DynamicVectorMaterialSlot",
     "m_ObjectId": "75047e6342e848ba9f96e03d81e2ee88",
     "m_Id": 1,
     "m_DisplayName": "Out",
@@ -3094,7 +3135,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector2MaterialSlot",
     "m_ObjectId": "9a93b0eafce84e1db6024216d7f358c0",
     "m_Id": 0,
-    "m_DisplayName": "CurrentTilePosition",
+    "m_DisplayName": "SelectedGameObjectFirstTilePosition",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -4131,6 +4172,42 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.RoundNode",
+    "m_ObjectId": "ced2cf3596cf498d9f5569cf54ffef4d",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "Round",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": -2167.199951171875,
+            "y": 522.4000244140625,
+            "width": 130.3997802734375,
+            "height": 93.5999755859375
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "d3b91ff46c374d2e9d6ded027e231269"
+        },
+        {
+            "m_Id": "74d73f2fa3614c44a8f18e7fd226d562"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": false,
+    "m_DismissedVersion": 0,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    }
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
     "m_ObjectId": "cfa54030c2744bc589c69edf6ff845e4",
     "m_Group": {
@@ -4141,9 +4218,9 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -2189.600341796875,
-            "y": 427.2000427246094,
-            "width": 176.0,
+            "x": -2452.800048828125,
+            "y": 563.2000122070313,
+            "width": 176.800048828125,
             "height": 33.5999755859375
         }
     },
@@ -4243,6 +4320,30 @@
     },
     "m_Property": {
         "m_Id": "d66c232853bb4d328e93d554c088947e"
+    }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.DynamicVectorMaterialSlot",
+    "m_ObjectId": "d3b91ff46c374d2e9d6ded027e231269",
+    "m_Id": 0,
+    "m_DisplayName": "In",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "In",
+    "m_StageCapability": 3,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
     }
 }
 
