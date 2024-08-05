@@ -20,17 +20,11 @@ namespace Editor
 			
 			if (GUILayout.Button("Collect"))
 			{
-				GameObject[] findGameObjectsWithTag = GameObject.FindGameObjectsWithTag(MoveKeyPointTag)[];
-				foreach (GameObject MovePoint in findGameObjectsWithTag)
-				{
-					
-				}
-				levelData.PathFinderKeyPoints = findGameObjectsWithTag.;
+
 				levelData.LevelKey = SceneManager.GetActiveScene().name;
 			}
       
 			EditorUtility.SetDirty(target);
-		}
 		}
 	}
 }
