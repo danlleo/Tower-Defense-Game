@@ -26,7 +26,7 @@ namespace Infrastructure.Factory
             EnemyStaticData enemyData = _staticData.ForEnemy(typeID);
             GameObject enemy = Object.Instantiate(enemyData.Prefab, parent.position, Quaternion.identity, parent);
 
-            enemy.GetComponent<EnemyMove>;
+          //  enemy.GetComponent<EnemyMove>;
        
             return enemy;
         }
