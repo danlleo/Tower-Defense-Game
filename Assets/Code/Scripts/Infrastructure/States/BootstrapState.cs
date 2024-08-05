@@ -56,6 +56,6 @@ namespace Infrastructure.States
     }
 
     private void EnterLoadLevel() =>
-      _stateMachine.Enter<LoadLevelState, string>("ArthurScene");
+      _stateMachine.Enter<LoadLevelState, string>("Main");
   }
 }
