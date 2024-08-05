@@ -1,25 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
-using Infrastructure.Mobs;
+using Mobs;
 using UnityEngine;
 
-namespace Infrastructure.StaticData
+namespace StaticData
 {
-    [CreateAssetMenu(fileName = "LevelConfig", menuName = "StaticData/LevelConfig", order = 0)]
-    public class LevelConfig : ScriptableObject
+    [CreateAssetMenu(fileName = "LevelWaveConfig", menuName = "StaticData/LevelConfig")]
+    public class LevelWaveConfig : ScriptableObject
     {
-        [SerializeField] private List<WaveConfig> waveConfigs = new();
-        public List<WaveConfig> WaveConfigs => waveConfigs;
+        [SerializeField] private List<WaveConfig> _waveConfigs = new List<WaveConfig>();
+        public List<WaveConfig> WaveConfigs => _waveConfigs;
     }
 
     [Serializable]
     public class WaveConfig
     {
-        [SerializeField] private string name;
-        public string Name => name;
+        [SerializeField] private string _name;
+        public string Name => _name;
 
-        [SerializeField] private List<WaveData> waveDataList = new();
-        public List<WaveData> WaveDataList => waveDataList;
+        [SerializeField] private List<WaveData> _waveDataList = new List<WaveData>();
+        public List<WaveData> WaveDataList => _waveDataList;
     }
 
     [Serializable]

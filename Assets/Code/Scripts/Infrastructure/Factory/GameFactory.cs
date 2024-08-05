@@ -1,7 +1,8 @@
 ﻿using Infrastructure.AssetManagment;
-using Infrastructure.Mobs;
-using Infrastructure.StaticData;
+using Logic.PathFinders;
+using Mobs;
 using Services;
+using StaticData;
 using UnityEngine;
 
 namespace Infrastructure.Factory
@@ -25,6 +26,8 @@ namespace Infrastructure.Factory
             EnemyStaticData enemyData = _staticData.ForEnemy(typeID);
             GameObject enemy = Object.Instantiate(enemyData.Prefab, parent.position, Quaternion.identity, parent);
 
+            enemy.GetComponent<EnemyMove>;
+       
             return enemy;
         }
     }

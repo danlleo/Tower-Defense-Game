@@ -1,4 +1,4 @@
-﻿using Infrastructure.Mobs;
+﻿using Mobs;
 using Services;
 using UnityEngine;
 

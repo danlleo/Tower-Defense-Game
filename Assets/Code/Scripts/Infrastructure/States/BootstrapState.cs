@@ -45,7 +45,7 @@ namespace Infrastructure.States
       _services.RegisterSingle<IInputService>(_inputService);
       _services.RegisterSingle<IAssetsProvider>(new AssetsProvider());
       _services.RegisterSingle<IGameFactory>(new GameFactory(_services.Single<IAssetsProvider>(), _services.Single<IStaticDataService>())); 
-      _services.RegisterSingle<IGridSystem>(new Services.Grid.GridSystem(_gridSystemSettings));
+      _services.RegisterSingle<IGridSystem>(new GridSystem(_gridSystemSettings));
     }
     
     private void RegisterStaticData()
@@ -56,6 +56,6 @@ namespace Infrastructure.States
     }
 
     private void EnterLoadLevel() =>
-      _stateMachine.Enter<LoadLevelState, string>("Main");
+      _stateMachine.Enter<LoadLevelState, string>("ArthurScene");
   }
 }

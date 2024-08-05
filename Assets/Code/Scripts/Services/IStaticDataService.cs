@@ -1,5 +1,5 @@
-﻿using Infrastructure.Mobs;
-using Infrastructure.StaticData;
+﻿using Mobs;
+using StaticData;
 
 namespace Services
 {

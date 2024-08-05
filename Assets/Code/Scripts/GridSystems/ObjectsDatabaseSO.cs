@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GridSystem
+namespace GridSystems
 {
     [CreateAssetMenu]
     public class ObjectsDatabaseSO : ScriptableObject

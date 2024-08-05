@@ -1,4 +1,4 @@
-﻿namespace Infrastructure.Mobs
+﻿namespace Mobs
 {
     public enum EnemyTypeID
     {

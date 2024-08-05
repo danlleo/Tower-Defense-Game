@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace GridSystem
+namespace GridSystems
 {
     [System.Serializable]
     public struct ObjectData

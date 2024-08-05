@@ -1,14 +1,14 @@
 ﻿using System.Collections;
 using Infrastructure.Factory;
-using Infrastructure.StaticData;
 using Services;
+using StaticData;
 using UnityEngine;
 
-namespace Infrastructure.Mobs
+namespace Mobs
 {
     public class EnemySpawner : MonoBehaviour
     {
-        public LevelConfig LevelConfig;
+        public LevelWaveConfig _levelWaveConfig;
 
         private IGameFactory _gameFactory;
         private int _waveNumber;
@@ -21,7 +21,7 @@ namespace Infrastructure.Mobs
 
         private IEnumerator SpawnFromWaveStaticData()
         {
-            while (_waveNumber < LevelConfig.WaveConfigs.Count)
+            while (_waveNumber < _levelWaveConfig.WaveConfigs.Count)
             {
                 yield return StartCoroutine(MobsSpawnIteration());
                 _waveNumber++;
@@ -30,10 +30,10 @@ namespace Infrastructure.Mobs
         
         private IEnumerator MobsSpawnIteration()
         {
-            if (_waveNumber >= LevelConfig.WaveConfigs.Count)
+            if (_waveNumber >= _levelWaveConfig.WaveConfigs.Count)
                 yield break;
 
-            WaveConfig waveConfig = LevelConfig.WaveConfigs[_waveNumber];
+            WaveConfig waveConfig = _levelWaveConfig.WaveConfigs[_waveNumber];
 
             foreach (WaveData waveData in waveConfig.WaveDataList)
             {

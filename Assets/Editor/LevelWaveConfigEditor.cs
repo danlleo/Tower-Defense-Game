@@ -1,20 +1,21 @@
-﻿using UnityEditor;
+﻿using StaticData;
+using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(Infrastructure.StaticData.LevelConfig))]
-public class LevelConfigEditor : UnityEditor.Editor
+[CustomEditor(typeof(LevelWaveConfig))]
+public class LevelWaveConfigEditor : UnityEditor.Editor
 {
     public override void OnInspectorGUI()
     {
         serializedObject.Update();
 
-        var levelConfig = (Infrastructure.StaticData.LevelConfig)target;
-        var waveConfigsProperty = serializedObject.FindProperty("waveConfigs");
+        LevelWaveConfig levelConfig = (LevelWaveConfig)target;
+        SerializedProperty waveConfigsProperty = serializedObject.FindProperty("waveConfigs");
 
         for (int i = 0; i < waveConfigsProperty.arraySize; i++)
         {
-            var waveConfigProperty = waveConfigsProperty.GetArrayElementAtIndex(i);
-            var nameProperty = waveConfigProperty.FindPropertyRelative("name");
+            SerializedProperty waveConfigProperty = waveConfigsProperty.GetArrayElementAtIndex(i);
+            SerializedProperty nameProperty = waveConfigProperty.FindPropertyRelative("name");
 
             EditorGUILayout.BeginHorizontal();
             nameProperty.stringValue = EditorGUILayout.TextField("Wave " + i, nameProperty.stringValue);
@@ -32,7 +33,7 @@ public class LevelConfigEditor : UnityEditor.Editor
         if (GUILayout.Button("Add Wave Config"))
         {
             waveConfigsProperty.InsertArrayElementAtIndex(waveConfigsProperty.arraySize);
-            var newWaveConfig = waveConfigsProperty.GetArrayElementAtIndex(waveConfigsProperty.arraySize - 1);
+            SerializedProperty newWaveConfig = waveConfigsProperty.GetArrayElementAtIndex(waveConfigsProperty.arraySize - 1);
             newWaveConfig.FindPropertyRelative("name").stringValue = "New Wave Config";
         }
 

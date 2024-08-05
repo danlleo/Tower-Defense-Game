@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace GridSystem
+namespace GridSystems
 {
     [DisallowMultipleComponent]
     public class InputManager : MonoBehaviour

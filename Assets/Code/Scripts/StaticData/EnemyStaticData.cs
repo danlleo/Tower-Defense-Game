@@ -1,7 +1,7 @@
-﻿using Infrastructure.Mobs;
+﻿using Mobs;
 using UnityEngine;
 
-namespace Infrastructure.StaticData
+namespace StaticData
 {
     [CreateAssetMenu(fileName = "EnemyData", menuName = "StaticData/Enemy", order = 0)]
     public class EnemyStaticData : ScriptableObject

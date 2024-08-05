@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace GridSystem
+namespace GridSystems
 {
     [DisallowMultipleComponent]
     public class PlacementSystem : MonoBehaviour
