@@ -18,4 +18,4 @@ MonoBehaviour:
     - <Delay>k__BackingField: 1.4
       MobsSpawnInterval: 0.74
       <EnemiesType>k__BackingField: 4
-      <EnemiesCount>k__BackingField: 1
+      <EnemiesCount>k__BackingField: 2

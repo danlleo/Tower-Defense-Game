@@ -20,9 +20,9 @@ namespace Mobs
         }
 
         private void AggroZoneEnter(Collider obj) =>
-            Debug.Log("Attack!");
+            print("Attack!");
 
         private void AggroZoneExit(Collider obj) =>
-            Debug.Log("Stop Attack! Я гражданский!");
+            print("Stop Attack! Я гражданский!");
     }
 }
