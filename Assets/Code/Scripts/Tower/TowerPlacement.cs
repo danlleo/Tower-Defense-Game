@@ -22,7 +22,7 @@ namespace Tower
 
         private void Awake()
         {
-            _gridSystem = AllServices.Container.Single<IGridSystem>() ?? new Services.Grid.GridSystem(new GridSystemSettings(40, 40, 1f));
+            _gridSystem = AllServices.Container.Single<IGridSystem>() ?? new GridSystem(new GridSystemSettings(40, 40, 1f));
             _inputService = AllServices.Container.Single<IInputService>();
         }
 
@@ -40,7 +40,6 @@ namespace Tower
 
         private void OnMouseUp()
         {
-            Debug.Log("mouse up");
             if (TryPlaceOnGrid(_mousePosition) is false)
                 transform.position = _positionBeforeGrab;
         }
@@ -60,10 +59,7 @@ namespace Tower
             (bool isPlaced, List<TilePosition> newTilePositions) = _gridSystem.TryPlaceObject(this, at: tilePosition);
             
             if (!isPlaced)
-            {
-                Debug.Log("not placed");
                 return false;
-            }
 
             OccupiedTiles = newTilePositions;
             transform.position = newTilePositions.First();
